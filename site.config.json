@@ -1,0 +1,96 @@
+{
+  "schema": "nuxtjp://localized-site/site-config/v1",
+  "siteId": "crowsi-network-engineering-site",
+  "serviceId": "crowsi-network-engineering",
+  "origin": "https://crowsi.org",
+  "audienceScope": "global",
+  "defaultLocale": "en",
+  "fallbackLocale": "ja",
+  "prefixDefaultLocale": false,
+  "locales": ["ja", "en"],
+  "externalActions": false,
+  "content": {
+    "ja": {
+      "brand": "Crowsi Network Engineering",
+      "tagline": "ネットワークとITインフラの設計、運用、自動化、障害解析を再現可能な知識へ",
+      "summary": "Crowsiはネットワーク設計、インフラ構築、運用管理、自動化、障害解析の技術記事と公開実績を共有します。一般的なEngineering情報であり、閲覧者の環境へ接続したり、個別環境の安全性や可用性を保証したりしません。",
+      "features": [
+        {"id": "network-design", "title": "ネットワーク設計", "summary": "要件、Trust境界、Address・Routing、冗長性、変更計画を設計判断とともに説明します。"},
+        {"id": "operations-automation", "title": "運用と自動化", "summary": "Network Sandboxと境界Monitorを使い、複数環境の隔離状態を安全な検証とRollbackを含む手順として共有します。"},
+        {"id": "incident-learning", "title": "障害からの学習", "summary": "匿名化した症状、仮説、証拠、切り分け、恒久対策を再利用可能な知識として整理します。"}
+      ],
+      "docs": {
+        "overview": {
+          "slug": "/docs",
+          "title": "Crowsiの概要",
+          "summary": "ネットワークEngineering情報の対象と責任境界を説明します。",
+          "sections": [
+            {"id": "engineering-scope", "title": "専門領域", "body": ["LAN、WAN、Cloud接続、名前解決、Firewall、可用性、運用自動化、障害解析を扱います。製品固有情報は対象版と公式資料を明記します。"]},
+            {"id": "advisory-boundary", "title": "一般情報としての境界", "body": ["掲載内容は学習と設計検討のための一般情報です。実環境の変更は資産所有者、契約、規制、停止影響、Rollbackを確認した担当者が承認してください。"]}
+          ]
+        },
+        "gettingStarted": {
+          "slug": "/docs/getting-started",
+          "title": "技術情報を安全に使う",
+          "summary": "記事やSampleを実環境へ適用する前の確認手順です。",
+          "sections": [
+            {"id": "match-environment", "title": "前提を照合する", "body": ["OS、Firmware、Provider、Topology、版、権限、停止可能時間が記事の前提と一致するか確認します。差がある場合はそのままCommandを実行しません。"]},
+            {"id": "test-and-rollback", "title": "検証とRollback", "body": ["隔離したLabまたは非本番で変更差分、監視、失敗条件、Rollbackを試します。実環境では承認、Backup、通信手段、作業記録を準備します。"]}
+          ]
+        },
+        "security": {
+          "slug": "/docs/security",
+          "title": "Infrastructure情報の安全性",
+          "summary": "構成情報、資格情報、実行手順を安全に公開・利用する原則です。",
+          "sections": [
+            {"id": "sanitize-config", "title": "構成を匿名化する", "body": ["実IP、hostname、account、秘密鍵、Token、顧客Topology、脆弱な状態を公開しません。Sampleは文書用Addressと無効な資格情報参照を使います。"]},
+            {"id": "no-remote-access", "title": "Remote accessを行わない", "body": ["このサイトは装置、Cloud、監視基盤、Repositoryへ接続せず、Commandも実行しません。個別支援を案内する場合も権限と安全な作業経路を別途合意します。"]}
+          ]
+        }
+      },
+      "privacy": {"label": "プライバシー", "summary": "公開サイトは閲覧者のネットワーク構成、IP、装置情報、資格情報を収集しません。診断情報を共有する場合は所有権を確認し、個人・顧客・Security情報を最小化してください。"},
+      "contact": {"label": "Crowsiへの連絡", "summary": "記事の誤りや安全上の懸念は、crowsi.orgで確認済みとして案内される窓口へ記事URL、対象版、匿名化した再現情報だけを送ってください。実構成や資格情報を送らないでください。"}
+    },
+    "en": {
+      "brand": "Crowsi Network Engineering",
+      "tagline": "Turning network and IT-infrastructure design, operations, automation, and incident analysis into reproducible knowledge",
+      "summary": "Crowsi shares technical writing and public work in network design, infrastructure delivery, operations, automation, and incident analysis. It provides general engineering information; it neither connects to a reader's environment nor guarantees its safety or availability.",
+      "features": [
+        {"id": "network-design", "title": "Network design", "summary": "Explains requirements, trust boundaries, addressing, routing, resilience, and change planning with design rationale."},
+        {"id": "operations-automation", "title": "Operations and automation", "summary": "Shares multi-environment isolation monitoring with the Network Sandbox and Boundary Monitor, including safe validation and rollback."},
+        {"id": "incident-learning", "title": "Incident learning", "summary": "Organizes sanitized symptoms, hypotheses, evidence, isolation, and permanent fixes as reusable knowledge."}
+      ],
+      "docs": {
+        "overview": {
+          "slug": "/docs",
+          "title": "Crowsi overview",
+          "summary": "Explains the scope and accountability boundary of network-engineering information.",
+          "sections": [
+            {"id": "engineering-scope", "title": "Engineering scope", "body": ["Topics include LAN, WAN, cloud connectivity, naming, firewalls, availability, operations automation, and incident analysis. Product-specific material states the target version and official source."]},
+            {"id": "advisory-boundary", "title": "General-information boundary", "body": ["Published material supports learning and design review. A responsible operator must approve production changes after checking ownership, contracts, regulation, outage impact, and rollback."]}
+          ]
+        },
+        "gettingStarted": {
+          "slug": "/docs/getting-started",
+          "title": "Use technical material safely",
+          "summary": "Checks before applying an article or sample to a real environment.",
+          "sections": [
+            {"id": "match-environment", "title": "Match the assumptions", "body": ["Compare the OS, firmware, provider, topology, version, authority, and maintenance window with the article. Do not copy a command unchanged when the assumptions differ."]},
+            {"id": "test-and-rollback", "title": "Test and prepare rollback", "body": ["Test the change, monitoring, failure condition, and rollback in an isolated lab or non-production environment. Prepare approval, backup, communication, and a work record for production."]}
+          ]
+        },
+        "security": {
+          "slug": "/docs/security",
+          "title": "Infrastructure-information security",
+          "summary": "Principles for publishing and using configuration, credentials, and procedures safely.",
+          "sections": [
+            {"id": "sanitize-config", "title": "Sanitize configurations", "body": ["Do not publish real IP addresses, hostnames, accounts, private keys, tokens, customer topology, or vulnerable state. Samples use documentation addresses and invalid credential references."]},
+            {"id": "no-remote-access", "title": "No remote access", "body": ["This site does not connect to devices, clouds, monitoring systems, or repositories and runs no commands. Any individual support requires a separately agreed authority and safe work channel."]}
+          ]
+        }
+      },
+      "privacy": {"label": "Privacy", "summary": "The public site collects no reader network topology, IP address, device information, or credentials. Before sharing diagnostics, verify ownership and minimize personal, customer, and security information."},
+      "contact": {"label": "Contact Crowsi", "summary": "Report article errors or safety concerns through a verified channel identified on crowsi.org, sending only the article URL, target version, and sanitized reproduction details. Never send real configurations or credentials."}
+    }
+  }
+}
