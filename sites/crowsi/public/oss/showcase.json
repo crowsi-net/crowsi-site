@@ -1,0 +1,296 @@
+{
+  "schema": "nuxtjp://showcase/v1",
+  "owner": "crowsi-net",
+  "observedAt": "2026-10-13T04:06:00Z",
+  "entries": [
+    {
+      "id": "crowsi-net-security-observations",
+      "kind": "oss",
+      "name": {
+        "ja": "security-observations",
+        "en": "security-observations"
+      },
+      "summary": {
+        "ja": "scopeに束縛されたsensor・evidenceとsecurity観測の基底。",
+        "en": "Scoped sensors, evidence and reusable security observations."
+      },
+      "repository": "https://github.com/crowsi-net/security-observations",
+      "homepage": "https://github.com/crowsi-net/security-observations",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "crowsi-net-credential-custody",
+      "kind": "oss",
+      "name": {
+        "ja": "credential-custody",
+        "en": "credential-custody"
+      },
+      "summary": {
+        "ja": "credential/device authority、限定利用、復旧とOS backendの基底。",
+        "en": "Credential and device authority, constrained usage, recovery and OS backends."
+      },
+      "repository": "https://github.com/crowsi-net/credential-custody",
+      "homepage": "https://github.com/crowsi-net/credential-custody",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "crowsi-net-authorized-execution",
+      "kind": "oss",
+      "name": {
+        "ja": "authorized-execution",
+        "en": "authorized-execution"
+      },
+      "summary": {
+        "ja": "policy、対象束縛、期限・失効と認可された実行の基底。",
+        "en": "Policy, target binding, expiry, revocation and authorized execution boundaries."
+      },
+      "repository": "https://github.com/crowsi-net/authorized-execution",
+      "homepage": "https://github.com/crowsi-net/authorized-execution",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "crowsi-net-crowsi-transport-foundation",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-transport-foundation",
+        "en": "crowsi-transport-foundation"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-transport-foundation の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Exchange bounded messages between local processes without building framing and timeout handling again."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-transport-foundation",
+      "homepage": "https://github.com/crowsi-net/crowsi-transport-foundation",
+      "license": "Apache-2.0",
+      "metrics": [
+        {
+          "registry": "crates.io",
+          "package": "crowsi-transport-foundation",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "unavailable",
+          "downloads": null,
+          "source": "https://crates.io/api/v1/crates/crowsi-transport-foundation/downloads"
+        },
+        {
+          "registry": "crates.io",
+          "package": "crowsi-authority-transport",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "unavailable",
+          "downloads": null,
+          "source": "https://crates.io/api/v1/crates/crowsi-authority-transport/downloads"
+        },
+        {
+          "registry": "npm",
+          "package": "@crowsi/transport-foundation",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "available",
+          "downloads": 336,
+          "source": "https://api.npmjs.org/downloads/point/2026-09-13:2026-10-12/%40crowsi%2Ftransport-foundation"
+        },
+        {
+          "registry": "npm",
+          "package": "@crowsi/interaction-transport",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "available",
+          "downloads": 425,
+          "source": "https://api.npmjs.org/downloads/point/2026-09-13:2026-10-12/%40crowsi%2Finteraction-transport"
+        },
+        {
+          "registry": "npm",
+          "package": "@crowsi/provider-http-transport",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "available",
+          "downloads": 518,
+          "source": "https://api.npmjs.org/downloads/point/2026-09-13:2026-10-12/%40crowsi%2Fprovider-http-transport"
+        }
+      ]
+    },
+    {
+      "id": "crowsi-net-crowsi-service-telemetry",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-service-telemetry",
+        "en": "crowsi-service-telemetry"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-service-telemetry の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Retain service-owned operational signals and publish only an explicitly allowed projection."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-service-telemetry",
+      "homepage": "https://github.com/crowsi-net/crowsi-service-telemetry",
+      "license": "Apache-2.0",
+      "metrics": [
+        {
+          "registry": "crates.io",
+          "package": "crowsi-telemetry-contracts",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "unavailable",
+          "downloads": null,
+          "source": "https://crates.io/api/v1/crates/crowsi-telemetry-contracts/downloads"
+        }
+      ]
+    },
+    {
+      "id": "crowsi-net-crowsi-site",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-site",
+        "en": "crowsi-site"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-site の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Explain network and infrastructure control boundaries and safe adoption."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-site",
+      "homepage": "https://github.com/crowsi-net/crowsi-site",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "crowsi-net-crowsi-browser-security",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-browser-security",
+        "en": "crowsi-browser-security"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-browser-security の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Compose browser bootstrap, session and CSRF checks for a caller-owned authentication flow."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-browser-security",
+      "homepage": "https://github.com/crowsi-net/crowsi-browser-security",
+      "license": "Apache-2.0",
+      "metrics": [
+        {
+          "registry": "npm",
+          "package": "@crowsi/browser-security",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "available",
+          "downloads": 316,
+          "source": "https://api.npmjs.org/downloads/point/2026-09-13:2026-10-12/%40crowsi%2Fbrowser-security"
+        }
+      ]
+    },
+    {
+      "id": "crowsi-net-crowsi-process-adapter",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-process-adapter",
+        "en": "crowsi-process-adapter"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-process-adapter の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Supervise a process tree and clean it up through explicit start and shutdown operations."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-process-adapter",
+      "homepage": "https://github.com/crowsi-net/crowsi-process-adapter",
+      "license": "Apache-2.0",
+      "metrics": [
+        {
+          "registry": "crates.io",
+          "package": "crowsi-process-adapter",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "unavailable",
+          "downloads": null,
+          "source": "https://crates.io/api/v1/crates/crowsi-process-adapter/downloads"
+        }
+      ]
+    },
+    {
+      "id": "crowsi-net-crowsi-network-sandbox",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-network-sandbox",
+        "en": "crowsi-network-sandbox"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-network-sandbox の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Run a finite command in a Linux environment with a separate network namespace and bounded resources."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-network-sandbox",
+      "homepage": "https://github.com/crowsi-net/crowsi-network-sandbox",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "crowsi-net-crowsi-network-controller",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-network-controller",
+        "en": "crowsi-network-controller"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-network-controller の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Evaluate a proposed network change against a deny-by-default policy before applying it."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-network-controller",
+      "homepage": "https://github.com/crowsi-net/crowsi-network-controller",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "crowsi-net-crowsi-auth-routing",
+      "kind": "oss",
+      "name": {
+        "ja": "crowsi-auth-routing",
+        "en": "crowsi-auth-routing"
+      },
+      "summary": {
+        "ja": "crowsi-net/crowsi-auth-routing の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Use the same validated authorization route declarations across an application and its MCP interface."
+      },
+      "repository": "https://github.com/crowsi-net/crowsi-auth-routing",
+      "homepage": "https://github.com/crowsi-net/crowsi-auth-routing",
+      "license": "Apache-2.0",
+      "metrics": [
+        {
+          "registry": "crates.io",
+          "package": "crowsi-auth-routing",
+          "period": {
+            "start": "2026-09-13",
+            "end": "2026-10-12"
+          },
+          "observedAt": "2026-10-13T04:06:00Z",
+          "status": "unavailable",
+          "downloads": null,
+          "source": "https://crates.io/api/v1/crates/crowsi-auth-routing/downloads"
+        }
+      ]
+    }
+  ]
+}
