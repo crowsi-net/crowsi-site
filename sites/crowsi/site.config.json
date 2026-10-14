@@ -14,24 +14,24 @@
   "externalActions": false,
   "content": {
     "ja": {
-      "brand": "Crowsi Network Engineering",
-      "tagline": "権限・秘密・実行の境界を、再利用できる基盤へ。",
-      "summary": "Crowsiは認可された実行、credential custody、security observations、上限付き通信とprocess/network境界を扱います。製品の実設定やCloud account情報を共通部品へ持ち込まず、fixtureと独立した利用例で責務を確認します。",
+      "brand": "Crowsi",
+      "tagline": "権限と実行を、明確な境界へ。",
+      "summary": "認可された実行、認証情報の保管、セキュリティの観測。Crowsiは、これらの境界をアプリケーションが利用できる共通の基底にします。",
       "features": [
         {
-          "id": "network-design",
-          "title": "ネットワーク設計",
-          "summary": "要件、Trust境界、Address・Routing、冗長性、変更計画を設計判断とともに説明します。"
+          "id": "focus-1",
+          "title": "認可された実行",
+          "summary": "対象と権限の境界を明示して実行を組み立てます。"
         },
         {
-          "id": "operations-automation",
-          "title": "運用と自動化",
-          "summary": "Network Sandboxと境界Monitorを使い、複数環境の隔離状態を安全な検証とRollbackを含む手順として共有します。"
+          "id": "focus-2",
+          "title": "認証情報の保管",
+          "summary": "秘密情報の保管と利用を、独立した責務として扱います。"
         },
         {
-          "id": "incident-learning",
-          "title": "障害からの学習",
-          "summary": "匿名化した症状、仮説、証拠、切り分け、恒久対策を再利用可能な知識として整理します。"
+          "id": "focus-3",
+          "title": "セキュリティの観測",
+          "summary": "sensorとevidence、上限付きの通信・process境界を扱います。"
         }
       ],
       "docs": {
@@ -116,24 +116,24 @@
       }
     },
     "en": {
-      "brand": "Crowsi Network Engineering",
-      "tagline": "Reusable boundaries for authority, credentials and execution.",
-      "summary": "Crowsi owns authorized execution, credential custody, security observations, bounded transport and process/network boundaries. Product profiles and cloud-account data stay with their owners. Fixtures and independent examples demonstrate the boundaries.",
+      "brand": "Crowsi",
+      "tagline": "Clear boundaries for permission and execution.",
+      "summary": "Crowsi provides application foundations for authorized execution, credential custody and security observations.",
       "features": [
         {
-          "id": "network-design",
-          "title": "Network design",
-          "summary": "Explains requirements, trust boundaries, addressing, routing, resilience, and change planning with design rationale."
+          "id": "focus-1",
+          "title": "Authorized execution",
+          "summary": "Compose execution with explicit permission and target boundaries."
         },
         {
-          "id": "operations-automation",
-          "title": "Operations and automation",
-          "summary": "Shares multi-environment isolation monitoring with the Network Sandbox and Boundary Monitor, including safe validation and rollback."
+          "id": "focus-2",
+          "title": "Credential custody",
+          "summary": "Keep custody and use of credentials as explicit responsibilities."
         },
         {
-          "id": "incident-learning",
-          "title": "Incident learning",
-          "summary": "Organizes sanitized symptoms, hypotheses, evidence, isolation, and permanent fixes as reusable knowledge."
+          "id": "focus-3",
+          "title": "Security observations",
+          "summary": "Work with sensors, evidence and bounded transport/process boundaries."
         }
       ],
       "docs": {
