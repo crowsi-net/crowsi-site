@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "site": "crowsi",
+  "source_file": "exec-01d54660-e945-4fda-b9d5-dcc6c422071f.png",
+  "sha256": "b2817db46a315732f02339e62195fa2cd3b4dde18267ee7e1ea0dc190d87cac4",
+  "artwork": "User-provided generated artwork, copied without alteration",
+  "theme": {
+    "accent": "#1464a4",
+    "paper": "#f4f8fc",
+    "ink": "#102d46"
+  }
+}
