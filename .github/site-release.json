@@ -17,7 +17,8 @@
       "siteConfig": "sites/crowsi/site.config.json",
       "appDirectory": ".",
       "assetDirectory": ".output/crowsi/public",
-      "buildKind": "organization"
+      "buildKind": "organization",
+      "zone": "3945266a8a82984b6f6171c55c501883"
     }
   ]
 }
