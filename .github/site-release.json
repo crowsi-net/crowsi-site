@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "repository": "crowsi-net/crowsi-site",
+  "defaultBranch": "main",
+  "requiredWorkflows": [
+    "site.yml"
+  ],
+  "sites": [
+    {
+      "id": "crowsi",
+      "version": "0.1.0",
+      "account": "0655772369a7b3425e3398313a36521b",
+      "worker": "crowsi-site",
+      "domain": "crowsi.org",
+      "origin": "https://crowsi.org",
+      "environment": "site-production-crowsi",
+      "siteConfig": "sites/crowsi/site.config.json",
+      "appDirectory": ".",
+      "assetDirectory": ".output/crowsi/public",
+      "buildKind": "organization",
+      "zone": "3945266a8a82984b6f6171c55c501883"
+    }
+  ]
+}
