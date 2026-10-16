@@ -395,6 +395,16 @@
           "summary": "機能別に、実装のREADMEと使い方を確認できます。",
           "sections": [
             {
+              "title": "はじめての方へ",
+              "text": "目的に合うライブラリと導入手順を確認できます。",
+              "links": [
+                {
+                  "title": "はじめるガイド",
+                  "href": "/docs/getting-started"
+                }
+              ]
+            },
+            {
               "title": "権限と実行制御",
               "text": "操作対象・期限・権限を確認し、プロセスや通信の実行境界を設ける。",
               "links": [
@@ -1107,6 +1117,16 @@
           "title": "Crowsi guides",
           "summary": "Find implementation READMEs and usage by capability.",
           "sections": [
+            {
+              "title": "New to Crowsi?",
+              "text": "Choose a library for your use case and find its setup instructions.",
+              "links": [
+                {
+                  "title": "Getting started",
+                  "href": "/docs/getting-started"
+                }
+              ]
+            },
             {
               "title": "Authorization and execution",
               "text": "Bind operations to explicit targets, expiry and permissions across process and network boundaries.",
