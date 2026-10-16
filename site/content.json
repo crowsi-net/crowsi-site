@@ -84,38 +84,75 @@
         {
           "path": "/capabilities",
           "title": "基盤を知る",
-          "summary": "権限、認証情報、実行の記録。アプリケーションが安全な境界を持つためのセキュリティ基盤。",
+          "summary": "目的から機能を選び、対応するリポジトリと導入手順へ進めます。",
           "sections": [
             {
-              "title": "許可された操作だけを",
-              "text": "対象と権限を明示し、実行前に境界を確かめるための部品を提供します。",
+              "title": "権限と実行制御",
+              "text": "操作対象・期限・権限を確認し、プロセスや通信の実行境界を設ける。",
               "links": [
                 {
-                  "title": "詳しく読む",
-                  "href": "/capabilities/authorization",
-                  "icon": "/brand/icons/key.svg"
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/authorization"
+                },
+                {
+                  "title": "authorized-execution",
+                  "href": "https://github.com/crowsi-net/authorized-execution",
+                  "summary": "許可された操作の対象・期限・権限を束縛し、実行を制御する基盤。"
+                },
+                {
+                  "title": "crowsi-auth-routing",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing",
+                  "summary": "認可の経路定義を、アプリケーションとMCPインターフェースで共有する。"
                 }
               ]
             },
             {
-              "title": "秘密を扱う責務を分ける",
-              "text": "認証情報の保管と利用を分離し、アプリケーションに不要な秘密を渡さない設計を支えます。",
+              "title": "認証情報の保管と利用",
+              "text": "認証情報の保管、利用権限、端末移行や復旧の責務を分ける。",
               "links": [
                 {
-                  "title": "詳しく読む",
-                  "href": "/capabilities/credentials",
-                  "icon": "/brand/icons/shield.svg"
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/credentials"
+                },
+                {
+                  "title": "credential-custody",
+                  "href": "https://github.com/crowsi-net/credential-custody",
+                  "summary": "認証情報の保管・限定利用・端末復旧を扱う基盤。"
                 }
               ]
             },
             {
-              "title": "結果を確かめる",
-              "text": "プロセスと通信の境界を観測し、判断に使う証跡を構造化します。",
+              "title": "観測と運用の記録",
+              "text": "セキュリティの観測とサービス運用の記録を、共有範囲を明示して扱う。",
               "links": [
                 {
-                  "title": "詳しく読む",
-                  "href": "/capabilities/observability",
-                  "icon": "/brand/icons/search.svg"
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/observability"
+                },
+                {
+                  "title": "security-observations",
+                  "href": "https://github.com/crowsi-net/security-observations",
+                  "summary": "指定範囲のセキュリティ観測と、判断の根拠となる記録を扱う基盤。"
+                },
+                {
+                  "title": "crowsi-service-telemetry",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
+                  "summary": "サービスの運用記録を保持し、許可した範囲だけを公開する。"
+                }
+              ]
+            },
+            {
+              "title": "プロセス間通信",
+              "text": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。",
+              "links": [
+                {
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/transport"
+                },
+                {
+                  "title": "crowsi-transport-foundation",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
+                  "summary": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。"
                 }
               ]
             }
@@ -127,106 +164,181 @@
         },
         {
           "path": "/capabilities/authorization",
-          "title": "許可された操作だけを",
-          "summary": "対象と権限を明示し、実行前に境界を確かめるための部品を提供します。",
+          "title": "権限と実行制御",
+          "summary": "操作対象・期限・権限を確認し、プロセスや通信の実行境界を設ける。",
           "sections": [
             {
-              "title": "こんなときに",
-              "text": "目的と扱う情報を整理し、必要な機能から小さく組み合わせます。",
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
               "links": [
                 {
-                  "title": "使い方を確認する",
-                  "href": "/docs/getting-started"
+                  "title": "authorized-execution",
+                  "href": "https://github.com/crowsi-net/authorized-execution",
+                  "summary": "許可された操作の対象・期限・権限を束縛し、実行を制御する基盤。"
+                },
+                {
+                  "title": "crowsi-auth-routing",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing",
+                  "summary": "認可の経路定義を、アプリケーションとMCPインターフェースで共有する。"
+                },
+                {
+                  "title": "crowsi-browser-security",
+                  "href": "https://github.com/crowsi-net/crowsi-browser-security",
+                  "summary": "ブラウザのセッション・起動時確認・CSRF検査を組み込む。"
+                },
+                {
+                  "title": "crowsi-process-adapter",
+                  "href": "https://github.com/crowsi-net/crowsi-process-adapter",
+                  "summary": "子プロセスの開始・監視・終了と、資源の制限を扱う。"
+                },
+                {
+                  "title": "crowsi-network-controller",
+                  "href": "https://github.com/crowsi-net/crowsi-network-controller",
+                  "summary": "ネットワークの変更案を、既定で拒否するポリシーに照らして検査する。"
+                },
+                {
+                  "title": "crowsi-network-sandbox",
+                  "href": "https://github.com/crowsi-net/crowsi-network-sandbox",
+                  "summary": "ネットワーク名前空間と資源を制限したLinux環境で、有限のコマンドを実行する。"
                 }
               ]
             },
             {
-              "title": "次に進む",
-              "text": "使い方や関連するテーマを、ガイドで確認できます。",
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
               "links": [
                 {
-                  "title": "活用シーン",
-                  "href": "/use-cases"
+                  "title": "authorized-execution — README",
+                  "href": "https://github.com/crowsi-net/authorized-execution/blob/main/README.md"
                 },
+                {
+                  "title": "crowsi-auth-routing — README",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-browser-security — README",
+                  "href": "https://github.com/crowsi-net/crowsi-browser-security/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
                 {
                   "title": "基盤を知る",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "許可された操作だけを",
+          "label": "権限と実行制御",
           "category": "",
           "status": "published"
         },
         {
           "path": "/capabilities/credentials",
-          "title": "秘密を扱う責務を分ける",
-          "summary": "認証情報の保管と利用を分離し、アプリケーションに不要な秘密を渡さない設計を支えます。",
+          "title": "認証情報の保管と利用",
+          "summary": "認証情報の保管、利用権限、端末移行や復旧の責務を分ける。",
           "sections": [
             {
-              "title": "こんなときに",
-              "text": "目的と扱う情報を整理し、必要な機能から小さく組み合わせます。",
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
               "links": [
                 {
-                  "title": "使い方を確認する",
-                  "href": "/docs/getting-started"
+                  "title": "credential-custody",
+                  "href": "https://github.com/crowsi-net/credential-custody",
+                  "summary": "認証情報の保管・限定利用・端末復旧を扱う基盤。"
                 }
               ]
             },
             {
-              "title": "次に進む",
-              "text": "使い方や関連するテーマを、ガイドで確認できます。",
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
               "links": [
                 {
-                  "title": "活用シーン",
-                  "href": "/use-cases"
-                },
+                  "title": "credential-custody — README",
+                  "href": "https://github.com/crowsi-net/credential-custody/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
                 {
                   "title": "基盤を知る",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "秘密を扱う責務を分ける",
+          "label": "認証情報の保管と利用",
           "category": "",
           "status": "published"
         },
         {
           "path": "/capabilities/observability",
-          "title": "結果を確かめる",
-          "summary": "プロセスと通信の境界を観測し、判断に使う証跡を構造化します。",
+          "title": "観測と運用の記録",
+          "summary": "セキュリティの観測とサービス運用の記録を、共有範囲を明示して扱う。",
           "sections": [
             {
-              "title": "こんなときに",
-              "text": "目的と扱う情報を整理し、必要な機能から小さく組み合わせます。",
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
               "links": [
                 {
-                  "title": "使い方を確認する",
-                  "href": "/docs/getting-started"
+                  "title": "security-observations",
+                  "href": "https://github.com/crowsi-net/security-observations",
+                  "summary": "指定範囲のセキュリティ観測と、判断の根拠となる記録を扱う基盤。"
+                },
+                {
+                  "title": "crowsi-service-telemetry",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
+                  "summary": "サービスの運用記録を保持し、許可した範囲だけを公開する。"
                 }
               ]
             },
             {
-              "title": "次に進む",
-              "text": "使い方や関連するテーマを、ガイドで確認できます。",
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
               "links": [
                 {
-                  "title": "活用シーン",
-                  "href": "/use-cases"
+                  "title": "security-observations — README",
+                  "href": "https://github.com/crowsi-net/security-observations/blob/main/README.md"
                 },
+                {
+                  "title": "crowsi-service-telemetry — README",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
                 {
                   "title": "基盤を知る",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "結果を確かめる",
+          "label": "観測と運用の記録",
           "category": "",
           "status": "published"
         },
@@ -240,9 +352,8 @@
               "text": "対象と権限を明示し、実行前に境界を確かめるための部品を提供します。",
               "links": [
                 {
-                  "title": "機能を見る",
-                  "href": "/capabilities/authorization",
-                  "icon": "/brand/icons/key.svg"
+                  "title": "実装を選ぶ：authorized-execution, crowsi-auth-routing",
+                  "href": "/capabilities/authorization"
                 }
               ]
             },
@@ -251,9 +362,8 @@
               "text": "認証情報の保管と利用を分離し、アプリケーションに不要な秘密を渡さない設計を支えます。",
               "links": [
                 {
-                  "title": "機能を見る",
-                  "href": "/capabilities/credentials",
-                  "icon": "/brand/icons/shield.svg"
+                  "title": "実装を選ぶ：credential-custody",
+                  "href": "/capabilities/credentials"
                 }
               ]
             },
@@ -262,9 +372,8 @@
               "text": "プロセスと通信の境界を観測し、判断に使う証跡を構造化します。",
               "links": [
                 {
-                  "title": "機能を見る",
-                  "href": "/capabilities/observability",
-                  "icon": "/brand/icons/search.svg"
+                  "title": "実装を選ぶ：security-observations, crowsi-service-telemetry",
+                  "href": "/capabilities/observability"
                 }
               ]
             }
@@ -287,19 +396,57 @@
         {
           "path": "/docs",
           "title": "ガイドとドキュメント",
-          "summary": "目的に合わせて、使い方と設計の考え方を確認できます。",
+          "summary": "機能別に、実装のREADMEと使い方を確認できます。",
           "sections": [
             {
-              "title": "はじめの一歩",
-              "text": "目的を確認し、必要な機能から始めましょう。",
+              "title": "権限と実行制御",
+              "text": "操作対象・期限・権限を確認し、プロセスや通信の実行境界を設ける。",
               "links": [
                 {
-                  "title": "導入ガイド",
-                  "href": "/docs/getting-started"
+                  "title": "authorized-execution — README",
+                  "href": "https://github.com/crowsi-net/authorized-execution/blob/main/README.md"
                 },
                 {
-                  "title": "安全に使うために",
-                  "href": "/security"
+                  "title": "crowsi-auth-routing — README",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-browser-security — README",
+                  "href": "https://github.com/crowsi-net/crowsi-browser-security/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "認証情報の保管と利用",
+              "text": "認証情報の保管、利用権限、端末移行や復旧の責務を分ける。",
+              "links": [
+                {
+                  "title": "credential-custody — README",
+                  "href": "https://github.com/crowsi-net/credential-custody/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "観測と運用の記録",
+              "text": "セキュリティの観測とサービス運用の記録を、共有範囲を明示して扱う。",
+              "links": [
+                {
+                  "title": "security-observations — README",
+                  "href": "https://github.com/crowsi-net/security-observations/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-service-telemetry — README",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "プロセス間通信",
+              "text": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。",
+              "links": [
+                {
+                  "title": "crowsi-transport-foundation — README",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation/blob/main/README.md"
                 }
               ]
             }
@@ -315,19 +462,48 @@
           "summary": "機能、使う場面、データの扱いを確認するためのガイドです。",
           "sections": [
             {
-              "title": "目的を選ぶ",
-              "text": "取り組む内容を機能や用途のページで確認します。",
+              "title": "目的に合う実装を選ぶ",
+              "text": "機能ごとにリポジトリと使い方を確認します。",
               "links": [
                 {
-                  "title": "基盤を知る",
-                  "href": "/capabilities"
+                  "title": "権限と実行制御",
+                  "href": "/capabilities/authorization"
+                },
+                {
+                  "title": "認証情報の保管と利用",
+                  "href": "/capabilities/credentials"
+                },
+                {
+                  "title": "観測と運用の記録",
+                  "href": "/capabilities/observability"
+                },
+                {
+                  "title": "プロセス間通信",
+                  "href": "/capabilities/transport"
                 }
               ]
             },
             {
-              "title": "利用条件を確認する",
-              "text": "導入するソフトウェアの対応環境、ライセンス、提供版を確認してください。",
-              "links": []
+              "title": "READMEから始める",
+              "text": "環境の準備・利用例・検証コマンドを確認してから導入してください。",
+              "links": [
+                {
+                  "title": "authorized-execution — README",
+                  "href": "https://github.com/crowsi-net/authorized-execution/blob/main/README.md"
+                },
+                {
+                  "title": "credential-custody — README",
+                  "href": "https://github.com/crowsi-net/credential-custody/blob/main/README.md"
+                },
+                {
+                  "title": "security-observations — README",
+                  "href": "https://github.com/crowsi-net/security-observations/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-transport-foundation — README",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation/blob/main/README.md"
+                }
+              ]
             }
           ],
           "kind": "page",
@@ -411,84 +587,130 @@
           "label": "サイトマップ",
           "category": "",
           "status": "published"
+        },
+        {
+          "path": "/capabilities/transport",
+          "title": "プロセス間通信",
+          "summary": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。",
+          "sections": [
+            {
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
+              "links": [
+                {
+                  "title": "crowsi-transport-foundation",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
+                  "summary": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。"
+                }
+              ]
+            },
+            {
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
+              "links": [
+                {
+                  "title": "crowsi-transport-foundation — README",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
+                {
+                  "title": "基盤を知る",
+                  "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
+                }
+              ]
+            }
+          ],
+          "kind": "page",
+          "label": "プロセス間通信",
+          "category": "",
+          "status": "published"
         }
       ],
       "resources": [
         {
           "title": "security-observations",
-          "summary": "scopeに束縛されたsensor・evidenceとsecurity観測の基底。",
+          "summary": "指定範囲のセキュリティ観測と、判断の根拠となる記録を扱う基盤。",
           "href": "https://github.com/crowsi-net/security-observations",
-          "category": "外部連携",
+          "category": "観測と運用の記録",
           "license": "Apache-2.0"
         },
         {
           "title": "credential-custody",
-          "summary": "credential/device authority、限定利用、復旧とOS backendの基底。",
+          "summary": "認証情報の保管・限定利用・端末復旧を扱う基盤。",
           "href": "https://github.com/crowsi-net/credential-custody",
-          "category": "外部連携",
+          "category": "認証情報の保管と利用",
           "license": "Apache-2.0"
         },
         {
           "title": "authorized-execution",
-          "summary": "policy、対象束縛、期限・失効と認可された実行の基底。",
+          "summary": "許可された操作の対象・期限・権限を束縛し、実行を制御する基盤。",
           "href": "https://github.com/crowsi-net/authorized-execution",
-          "category": "外部連携",
+          "category": "権限と実行制御",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-transport-foundation",
-          "summary": "Exchange bounded messages between local processes without building framing and timeout handling again.",
+          "summary": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。",
           "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
-          "category": "外部連携",
+          "category": "プロセス間通信",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-service-telemetry",
-          "summary": "Retain service-owned operational signals and publish only an explicitly allowed projection.",
+          "summary": "サービスの運用記録を保持し、許可した範囲だけを公開する。",
           "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
-          "category": "外部連携",
+          "category": "観測と運用の記録",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-site",
-          "summary": "Explain network and infrastructure control boundaries and safe adoption.",
+          "summary": "Crowsiのセキュリティ基盤とライブラリを紹介するサイトのソース。",
           "href": "https://github.com/crowsi-net/crowsi-site",
-          "category": "外部連携",
+          "category": "プロジェクト情報",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-browser-security",
-          "summary": "Compose browser bootstrap, session and CSRF checks for a caller-owned authentication flow.",
+          "summary": "ブラウザのセッション・起動時確認・CSRF検査を組み込む。",
           "href": "https://github.com/crowsi-net/crowsi-browser-security",
-          "category": "外部連携",
+          "category": "権限と実行制御",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-process-adapter",
-          "summary": "Supervise a process tree and clean it up through explicit start and shutdown operations.",
+          "summary": "子プロセスの開始・監視・終了と、資源の制限を扱う。",
           "href": "https://github.com/crowsi-net/crowsi-process-adapter",
-          "category": "外部連携",
+          "category": "権限と実行制御",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-network-sandbox",
-          "summary": "Run a finite command in a Linux environment with a separate network namespace and bounded resources.",
+          "summary": "ネットワーク名前空間と資源を制限したLinux環境で、有限のコマンドを実行する。",
           "href": "https://github.com/crowsi-net/crowsi-network-sandbox",
-          "category": "外部連携",
+          "category": "権限と実行制御",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-network-controller",
-          "summary": "Evaluate a proposed network change against a deny-by-default policy before applying it.",
+          "summary": "ネットワークの変更案を、既定で拒否するポリシーに照らして検査する。",
           "href": "https://github.com/crowsi-net/crowsi-network-controller",
-          "category": "外部連携",
+          "category": "権限と実行制御",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-auth-routing",
-          "summary": "Use the same validated authorization route declarations across an application and its MCP interface.",
+          "summary": "認可の経路定義を、アプリケーションとMCPインターフェースで共有する。",
           "href": "https://github.com/crowsi-net/crowsi-auth-routing",
-          "category": "外部連携",
+          "category": "権限と実行制御",
           "license": "Apache-2.0"
         }
       ],
@@ -575,38 +797,75 @@
         {
           "path": "/capabilities",
           "title": "Explore the foundations",
-          "summary": "Security foundations for authorization, credential custody and observable execution.",
+          "summary": "Choose a capability and continue to its repositories and setup instructions.",
           "sections": [
             {
-              "title": "Authorized operations",
-              "text": "Declare targets and permissions before handing work to an execution boundary.",
+              "title": "Authorization and execution",
+              "text": "Bind operations to explicit targets, expiry and permissions across process and network boundaries.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/authorization",
-                  "icon": "/brand/icons/key.svg"
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/authorization"
+                },
+                {
+                  "title": "authorized-execution",
+                  "href": "https://github.com/crowsi-net/authorized-execution",
+                  "summary": "Policy, target binding, expiry, revocation and authorized execution boundaries."
+                },
+                {
+                  "title": "crowsi-auth-routing",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing",
+                  "summary": "Use the same validated authorization route declarations across an application and its MCP interface."
                 }
               ]
             },
             {
               "title": "Credential custody",
-              "text": "Separate storage from use and limit the secrets an application needs to handle.",
+              "text": "Separate credential custody, limited use, device transfer and recovery.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/credentials",
-                  "icon": "/brand/icons/shield.svg"
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/credentials"
+                },
+                {
+                  "title": "credential-custody",
+                  "href": "https://github.com/crowsi-net/credential-custody",
+                  "summary": "Credential and device authority, constrained usage, recovery and OS backends."
                 }
               ]
             },
             {
-              "title": "Observable results",
-              "text": "Structure evidence from process and communication boundaries for inspection.",
+              "title": "Observations and telemetry",
+              "text": "Collect scoped security evidence and service telemetry with explicit disclosure boundaries.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/observability",
-                  "icon": "/brand/icons/search.svg"
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/observability"
+                },
+                {
+                  "title": "security-observations",
+                  "href": "https://github.com/crowsi-net/security-observations",
+                  "summary": "Scoped sensors, evidence and reusable security observations."
+                },
+                {
+                  "title": "crowsi-service-telemetry",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
+                  "summary": "Retain service-owned operational signals and publish only an explicitly allowed projection."
+                }
+              ]
+            },
+            {
+              "title": "Process communication",
+              "text": "Exchange bounded messages between local processes with framing and timeout handling.",
+              "links": [
+                {
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/transport"
+                },
+                {
+                  "title": "crowsi-transport-foundation",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
+                  "summary": "Exchange bounded messages between local processes without building framing and timeout handling again."
                 }
               ]
             }
@@ -618,65 +877,120 @@
         },
         {
           "path": "/capabilities/authorization",
-          "title": "Authorized operations",
-          "summary": "Declare targets and permissions before handing work to an execution boundary.",
+          "title": "Authorization and execution",
+          "summary": "Bind operations to explicit targets, expiry and permissions across process and network boundaries.",
           "sections": [
             {
-              "title": "When to use it",
-              "text": "Start with the information and outcome you need, then combine focused capabilities.",
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
               "links": [
                 {
-                  "title": "Read the guide",
-                  "href": "/docs/getting-started"
+                  "title": "authorized-execution",
+                  "href": "https://github.com/crowsi-net/authorized-execution",
+                  "summary": "Policy, target binding, expiry, revocation and authorized execution boundaries."
+                },
+                {
+                  "title": "crowsi-auth-routing",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing",
+                  "summary": "Use the same validated authorization route declarations across an application and its MCP interface."
+                },
+                {
+                  "title": "crowsi-browser-security",
+                  "href": "https://github.com/crowsi-net/crowsi-browser-security",
+                  "summary": "Compose browser bootstrap, session and CSRF checks for a caller-owned authentication flow."
+                },
+                {
+                  "title": "crowsi-process-adapter",
+                  "href": "https://github.com/crowsi-net/crowsi-process-adapter",
+                  "summary": "Supervise a process tree and clean it up through explicit start and shutdown operations."
+                },
+                {
+                  "title": "crowsi-network-controller",
+                  "href": "https://github.com/crowsi-net/crowsi-network-controller",
+                  "summary": "Evaluate a proposed network change against a deny-by-default policy before applying it."
+                },
+                {
+                  "title": "crowsi-network-sandbox",
+                  "href": "https://github.com/crowsi-net/crowsi-network-sandbox",
+                  "summary": "Run a finite command in a Linux environment with a separate network namespace and bounded resources."
                 }
               ]
             },
             {
-              "title": "Next steps",
-              "text": "Explore the guides and related topics.",
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
               "links": [
                 {
-                  "title": "Use cases",
-                  "href": "/use-cases"
+                  "title": "authorized-execution — README",
+                  "href": "https://github.com/crowsi-net/authorized-execution/blob/main/README.md"
                 },
+                {
+                  "title": "crowsi-auth-routing — README",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-browser-security — README",
+                  "href": "https://github.com/crowsi-net/crowsi-browser-security/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
                 {
                   "title": "Explore the foundations",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "Authorized operations",
+          "label": "Authorization and execution",
           "category": "",
           "status": "published"
         },
         {
           "path": "/capabilities/credentials",
           "title": "Credential custody",
-          "summary": "Separate storage from use and limit the secrets an application needs to handle.",
+          "summary": "Separate credential custody, limited use, device transfer and recovery.",
           "sections": [
             {
-              "title": "When to use it",
-              "text": "Start with the information and outcome you need, then combine focused capabilities.",
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
               "links": [
                 {
-                  "title": "Read the guide",
-                  "href": "/docs/getting-started"
+                  "title": "credential-custody",
+                  "href": "https://github.com/crowsi-net/credential-custody",
+                  "summary": "Credential and device authority, constrained usage, recovery and OS backends."
                 }
               ]
             },
             {
-              "title": "Next steps",
-              "text": "Explore the guides and related topics.",
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
               "links": [
                 {
-                  "title": "Use cases",
-                  "href": "/use-cases"
-                },
+                  "title": "credential-custody — README",
+                  "href": "https://github.com/crowsi-net/credential-custody/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
                 {
                   "title": "Explore the foundations",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
                 }
               ]
             }
@@ -688,36 +1002,56 @@
         },
         {
           "path": "/capabilities/observability",
-          "title": "Observable results",
-          "summary": "Structure evidence from process and communication boundaries for inspection.",
+          "title": "Observations and telemetry",
+          "summary": "Collect scoped security evidence and service telemetry with explicit disclosure boundaries.",
           "sections": [
             {
-              "title": "When to use it",
-              "text": "Start with the information and outcome you need, then combine focused capabilities.",
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
               "links": [
                 {
-                  "title": "Read the guide",
-                  "href": "/docs/getting-started"
+                  "title": "security-observations",
+                  "href": "https://github.com/crowsi-net/security-observations",
+                  "summary": "Scoped sensors, evidence and reusable security observations."
+                },
+                {
+                  "title": "crowsi-service-telemetry",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
+                  "summary": "Retain service-owned operational signals and publish only an explicitly allowed projection."
                 }
               ]
             },
             {
-              "title": "Next steps",
-              "text": "Explore the guides and related topics.",
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
               "links": [
                 {
-                  "title": "Use cases",
-                  "href": "/use-cases"
+                  "title": "security-observations — README",
+                  "href": "https://github.com/crowsi-net/security-observations/blob/main/README.md"
                 },
+                {
+                  "title": "crowsi-service-telemetry — README",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
                 {
                   "title": "Explore the foundations",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "Observable results",
+          "label": "Observations and telemetry",
           "category": "",
           "status": "published"
         },
@@ -731,9 +1065,8 @@
               "text": "Declare targets and permissions before handing work to an execution boundary.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/authorization",
-                  "icon": "/brand/icons/key.svg"
+                  "title": "Choose: authorized-execution, crowsi-auth-routing",
+                  "href": "/capabilities/authorization"
                 }
               ]
             },
@@ -742,9 +1075,8 @@
               "text": "Separate storage from use and limit the secrets an application needs to handle.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/credentials",
-                  "icon": "/brand/icons/shield.svg"
+                  "title": "Choose: credential-custody",
+                  "href": "/capabilities/credentials"
                 }
               ]
             },
@@ -753,9 +1085,8 @@
               "text": "Structure evidence from process and communication boundaries for inspection.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/observability",
-                  "icon": "/brand/icons/search.svg"
+                  "title": "Choose: security-observations, crowsi-service-telemetry",
+                  "href": "/capabilities/observability"
                 }
               ]
             }
@@ -778,19 +1109,57 @@
         {
           "path": "/docs",
           "title": "Guides and documentation",
-          "summary": "Explore usage guides and design principles.",
+          "summary": "Find implementation READMEs and usage by capability.",
           "sections": [
             {
-              "title": "Getting started",
-              "text": "Start with your goal and the capabilities you need.",
+              "title": "Authorization and execution",
+              "text": "Bind operations to explicit targets, expiry and permissions across process and network boundaries.",
               "links": [
                 {
-                  "title": "Getting started",
-                  "href": "/docs/getting-started"
+                  "title": "authorized-execution — README",
+                  "href": "https://github.com/crowsi-net/authorized-execution/blob/main/README.md"
                 },
                 {
-                  "title": "Security guide",
-                  "href": "/security"
+                  "title": "crowsi-auth-routing — README",
+                  "href": "https://github.com/crowsi-net/crowsi-auth-routing/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-browser-security — README",
+                  "href": "https://github.com/crowsi-net/crowsi-browser-security/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Credential custody",
+              "text": "Separate credential custody, limited use, device transfer and recovery.",
+              "links": [
+                {
+                  "title": "credential-custody — README",
+                  "href": "https://github.com/crowsi-net/credential-custody/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Observations and telemetry",
+              "text": "Collect scoped security evidence and service telemetry with explicit disclosure boundaries.",
+              "links": [
+                {
+                  "title": "security-observations — README",
+                  "href": "https://github.com/crowsi-net/security-observations/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-service-telemetry — README",
+                  "href": "https://github.com/crowsi-net/crowsi-service-telemetry/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Process communication",
+              "text": "Exchange bounded messages between local processes with framing and timeout handling.",
+              "links": [
+                {
+                  "title": "crowsi-transport-foundation — README",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation/blob/main/README.md"
                 }
               ]
             }
@@ -806,19 +1175,48 @@
           "summary": "A guide to capabilities, use cases and data boundaries.",
           "sections": [
             {
-              "title": "Choose a goal",
-              "text": "Explore the capability or use-case pages for the work you have in mind.",
+              "title": "Choose an implementation",
+              "text": "Find repositories and usage for each capability.",
               "links": [
                 {
-                  "title": "Explore the foundations",
-                  "href": "/capabilities"
+                  "title": "Authorization and execution",
+                  "href": "/capabilities/authorization"
+                },
+                {
+                  "title": "Credential custody",
+                  "href": "/capabilities/credentials"
+                },
+                {
+                  "title": "Observations and telemetry",
+                  "href": "/capabilities/observability"
+                },
+                {
+                  "title": "Process communication",
+                  "href": "/capabilities/transport"
                 }
               ]
             },
             {
-              "title": "Review usage conditions",
-              "text": "Check the supported environment, license and available release of the software you select.",
-              "links": []
+              "title": "Start with the README",
+              "text": "Check prerequisites, examples and verification commands before adoption.",
+              "links": [
+                {
+                  "title": "authorized-execution — README",
+                  "href": "https://github.com/crowsi-net/authorized-execution/blob/main/README.md"
+                },
+                {
+                  "title": "credential-custody — README",
+                  "href": "https://github.com/crowsi-net/credential-custody/blob/main/README.md"
+                },
+                {
+                  "title": "security-observations — README",
+                  "href": "https://github.com/crowsi-net/security-observations/blob/main/README.md"
+                },
+                {
+                  "title": "crowsi-transport-foundation — README",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation/blob/main/README.md"
+                }
+              ]
             }
           ],
           "kind": "page",
@@ -902,6 +1300,52 @@
           "label": "Sitemap",
           "category": "",
           "status": "published"
+        },
+        {
+          "path": "/capabilities/transport",
+          "title": "Process communication",
+          "summary": "Exchange bounded messages between local processes with framing and timeout handling.",
+          "sections": [
+            {
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
+              "links": [
+                {
+                  "title": "crowsi-transport-foundation",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
+                  "summary": "Exchange bounded messages between local processes without building framing and timeout handling again."
+                }
+              ]
+            },
+            {
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
+              "links": [
+                {
+                  "title": "crowsi-transport-foundation — README",
+                  "href": "https://github.com/crowsi-net/crowsi-transport-foundation/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
+                {
+                  "title": "Explore the foundations",
+                  "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
+                }
+              ]
+            }
+          ],
+          "kind": "page",
+          "label": "Process communication",
+          "category": "",
+          "status": "published"
         }
       ],
       "resources": [
@@ -909,77 +1353,77 @@
           "title": "security-observations",
           "summary": "Scoped sensors, evidence and reusable security observations.",
           "href": "https://github.com/crowsi-net/security-observations",
-          "category": "Integrations",
+          "category": "Observations and telemetry",
           "license": "Apache-2.0"
         },
         {
           "title": "credential-custody",
           "summary": "Credential and device authority, constrained usage, recovery and OS backends.",
           "href": "https://github.com/crowsi-net/credential-custody",
-          "category": "Integrations",
+          "category": "Credential custody",
           "license": "Apache-2.0"
         },
         {
           "title": "authorized-execution",
           "summary": "Policy, target binding, expiry, revocation and authorized execution boundaries.",
           "href": "https://github.com/crowsi-net/authorized-execution",
-          "category": "Integrations",
+          "category": "Authorization and execution",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-transport-foundation",
           "summary": "Exchange bounded messages between local processes without building framing and timeout handling again.",
           "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
-          "category": "Integrations",
+          "category": "Process communication",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-service-telemetry",
           "summary": "Retain service-owned operational signals and publish only an explicitly allowed projection.",
           "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
-          "category": "Integrations",
+          "category": "Observations and telemetry",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-site",
           "summary": "Explain network and infrastructure control boundaries and safe adoption.",
           "href": "https://github.com/crowsi-net/crowsi-site",
-          "category": "Integrations",
+          "category": "Project information",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-browser-security",
           "summary": "Compose browser bootstrap, session and CSRF checks for a caller-owned authentication flow.",
           "href": "https://github.com/crowsi-net/crowsi-browser-security",
-          "category": "Integrations",
+          "category": "Authorization and execution",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-process-adapter",
           "summary": "Supervise a process tree and clean it up through explicit start and shutdown operations.",
           "href": "https://github.com/crowsi-net/crowsi-process-adapter",
-          "category": "Integrations",
+          "category": "Authorization and execution",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-network-sandbox",
           "summary": "Run a finite command in a Linux environment with a separate network namespace and bounded resources.",
           "href": "https://github.com/crowsi-net/crowsi-network-sandbox",
-          "category": "Integrations",
+          "category": "Authorization and execution",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-network-controller",
           "summary": "Evaluate a proposed network change against a deny-by-default policy before applying it.",
           "href": "https://github.com/crowsi-net/crowsi-network-controller",
-          "category": "Integrations",
+          "category": "Authorization and execution",
           "license": "Apache-2.0"
         },
         {
           "title": "crowsi-auth-routing",
           "summary": "Use the same validated authorization route declarations across an application and its MCP interface.",
           "href": "https://github.com/crowsi-net/crowsi-auth-routing",
-          "category": "Integrations",
+          "category": "Authorization and execution",
           "license": "Apache-2.0"
         }
       ],
