@@ -25,10 +25,6 @@
         {
           "title": "ドキュメント",
           "href": "/docs"
-        },
-        {
-          "title": "読みもの",
-          "href": "/journal"
         }
       ],
       "pages": [
@@ -38,8 +34,8 @@
           "summary": "権限、認証情報、実行の記録。アプリケーションが安全な境界を持つためのセキュリティ基盤。",
           "sections": [
             {
-              "title": "目的から、次の一歩へ。",
-              "text": "関心のあるテーマから、機能と使い方をご覧ください。",
+              "title": "権限・資格情報・実行を分けて考える",
+              "text": "どの操作を許し、どの資格情報を使い、何を記録するか。境界ごとに基盤を確認できます。",
               "links": [
                 {
                   "title": "許可された操作だけを",
@@ -62,8 +58,8 @@
               ]
             },
             {
-              "title": "使い方をイメージする",
-              "text": "用途ごとに、取り組み方と選ぶ道具を整理しています。",
+              "title": "実装と安全性の前提を確認する",
+              "text": "基盤の採用前に、対象プロセスと権限、利用できる保管方式、観測できる範囲を確認します。",
               "links": [
                 {
                   "title": "活用シーンを見る",
@@ -344,8 +340,8 @@
         },
         {
           "path": "/use-cases",
-          "title": "使う場面から、考える。",
-          "summary": "目的に合わせて、情報の扱いと道具の選び方を整理します。",
+          "title": "権限と実行の境界を設計する",
+          "summary": "各場面から、Crowsiの使い方と関連するガイドへ進めます。",
           "sections": [
             {
               "title": "許可された操作だけを",
@@ -379,13 +375,13 @@
             }
           ],
           "kind": "page",
-          "label": "使う場面から、考える。",
+          "label": "権限と実行の境界を設計する",
           "category": "",
           "status": "published"
         },
         {
           "path": "/oss",
-          "title": "目的に合った部品を探す",
+          "title": "Crowsiのライブラリ",
           "summary": "カテゴリとキーワードから、公開ライブラリとソースを探せます。",
           "sections": [],
           "kind": "catalog",
@@ -395,7 +391,7 @@
         },
         {
           "path": "/docs",
-          "title": "ガイドとドキュメント",
+          "title": "Crowsiのガイド",
           "summary": "機能別に、実装のREADMEと使い方を確認できます。",
           "sections": [
             {
@@ -452,7 +448,7 @@
             }
           ],
           "kind": "page",
-          "label": "ガイドとドキュメント",
+          "label": "Crowsiのガイド",
           "category": "",
           "status": "published"
         },
@@ -714,7 +710,11 @@
           "license": "Apache-2.0"
         }
       ],
-      "icon": "/brand/icon.png"
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "導入・ドキュメント",
+        "href": "/docs"
+      }
     },
     "en": {
       "brand": "Crowsi",
@@ -738,10 +738,6 @@
         {
           "title": "Docs",
           "href": "/docs"
-        },
-        {
-          "title": "Journal",
-          "href": "/journal"
         }
       ],
       "pages": [
@@ -751,8 +747,8 @@
           "summary": "Security foundations for authorization, credential custody and observable execution.",
           "sections": [
             {
-              "title": "Find your next step.",
-              "text": "Explore capabilities and guides by the work you want to do.",
+              "title": "Separate authority, credentials and execution",
+              "text": "Explore the foundations for allowed operations, credential use and execution evidence.",
               "links": [
                 {
                   "title": "Authorized operations",
@@ -775,8 +771,8 @@
               ]
             },
             {
-              "title": "Explore the possibilities",
-              "text": "Find a workflow and the tools that fit your use case.",
+              "title": "Inspect implementations and security assumptions",
+              "text": "Review process boundaries, permissions, supported custody mechanisms and observation limits before adoption.",
               "links": [
                 {
                   "title": "Explore use cases",
@@ -1057,8 +1053,8 @@
         },
         {
           "path": "/use-cases",
-          "title": "Start with the work.",
-          "summary": "Explore approaches to organizing information and selecting tools.",
+          "title": "Design authority and execution boundaries",
+          "summary": "Explore Crowsi through specific scenarios and related guides.",
           "sections": [
             {
               "title": "Authorized operations",
@@ -1092,13 +1088,13 @@
             }
           ],
           "kind": "page",
-          "label": "Start with the work.",
+          "label": "Design authority and execution boundaries",
           "category": "",
           "status": "published"
         },
         {
           "path": "/oss",
-          "title": "Find the right building blocks",
+          "title": "Crowsi libraries",
           "summary": "Browse public libraries and source by category and keyword.",
           "sections": [],
           "kind": "catalog",
@@ -1108,7 +1104,7 @@
         },
         {
           "path": "/docs",
-          "title": "Guides and documentation",
+          "title": "Crowsi guides",
           "summary": "Find implementation READMEs and usage by capability.",
           "sections": [
             {
@@ -1165,7 +1161,7 @@
             }
           ],
           "kind": "page",
-          "label": "Guides and documentation",
+          "label": "Crowsi guides",
           "category": "",
           "status": "published"
         },
@@ -1427,7 +1423,11 @@
           "license": "Apache-2.0"
         }
       ],
-      "icon": "/brand/icon.png"
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "Setup & documentation",
+        "href": "/docs"
+      }
     }
   }
 }
