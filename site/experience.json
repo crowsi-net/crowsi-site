@@ -1,0 +1,100 @@
+{
+  "ja": {
+    "category": "権限・資格情報・実行の基盤",
+    "primary": {
+      "href": "/use-cases",
+      "title": "利用シーンを見る"
+    },
+    "secondary": {
+      "href": "/oss",
+      "title": "実装を探す"
+    },
+    "pathsTitle": "何をお探しですか？",
+    "paths": [
+      {
+        "href": "/capabilities/credentials",
+        "title": "資格情報を安全に扱う",
+        "summary": "OS保管と明示的な利用経路"
+      },
+      {
+        "href": "/capabilities/authorization",
+        "title": "実行する権限を分ける",
+        "summary": "対象と許可を照合する"
+      },
+      {
+        "href": "/oss",
+        "title": "導入する部品を探す",
+        "summary": "対応環境と公開実装を確認"
+      }
+    ],
+    "preview": {
+      "kind": "trust",
+      "label": "使い方のイメージ",
+      "title": "秘密を渡さず、役割をつなぐ。",
+      "rows": [
+        {
+          "label": "保管",
+          "detail": "OSの保管機構で管理する"
+        },
+        {
+          "label": "利用の許可",
+          "detail": "主体・対象・用途を確かめる"
+        },
+        {
+          "label": "結果の確認",
+          "detail": "実行と失効を記録する"
+        }
+      ],
+      "outcome": "実装・試験・対応環境を個別に確認。"
+    }
+  },
+  "en": {
+    "category": "Foundations for trusted execution",
+    "primary": {
+      "href": "/use-cases",
+      "title": "Explore use cases"
+    },
+    "secondary": {
+      "href": "/oss",
+      "title": "Explore implementations"
+    },
+    "pathsTitle": "What brings you here?",
+    "paths": [
+      {
+        "href": "/capabilities/credentials",
+        "title": "Handle credentials",
+        "summary": "OS custody and explicit credential use"
+      },
+      {
+        "href": "/capabilities/authorization",
+        "title": "Separate execution authority",
+        "summary": "Match targets to explicit permissions"
+      },
+      {
+        "href": "/oss",
+        "title": "Find a component",
+        "summary": "Review platforms and public implementations"
+      }
+    ],
+    "preview": {
+      "kind": "trust",
+      "label": "Workflow illustration",
+      "title": "Connect roles. Keep credentials scoped.",
+      "rows": [
+        {
+          "label": "Custody",
+          "detail": "Use the operating system’s custody provider"
+        },
+        {
+          "label": "Authorization",
+          "detail": "Check principal, target and purpose"
+        },
+        {
+          "label": "Observation",
+          "detail": "Record execution and revocation"
+        }
+      ],
+      "outcome": "Review implementation and platform evidence."
+    }
+  }
+}
