@@ -1,0 +1,259 @@
+{
+  "siteId": "crowsi",
+  "origin": "https://crowsi.org",
+  "defaultLocale": "en",
+  "locales": {
+    "ja": {
+      "brand": "Crowsi",
+      "caption": "",
+      "origin": "https://crowsi.org",
+      "locale": "ja",
+      "accent": "#235c99",
+      "navigation": [
+        {
+          "title": "基盤を知る",
+          "href": "/capabilities"
+        },
+        {
+          "title": "活用シーン",
+          "href": "/use-cases"
+        },
+        {
+          "title": "ライブラリ",
+          "href": "/oss"
+        },
+        {
+          "title": "ドキュメント",
+          "href": "/docs"
+        }
+      ],
+      "resources": [
+        {
+          "title": "security-observations",
+          "summary": "指定範囲のセキュリティ観測と、判断の根拠となる記録を扱う基盤。",
+          "href": "https://github.com/crowsi-net/security-observations",
+          "category": "観測と運用の記録",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "credential-custody",
+          "summary": "認証情報の保管・限定利用・端末復旧を扱う基盤。",
+          "href": "https://github.com/crowsi-net/credential-custody",
+          "category": "認証情報の保管と利用",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "authorized-execution",
+          "summary": "許可された操作の対象・期限・権限を束縛し、実行を制御する基盤。",
+          "href": "https://github.com/crowsi-net/authorized-execution",
+          "category": "権限と実行制御",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-transport-foundation",
+          "summary": "ローカルプロセス間で、サイズ・時間制限付きのメッセージを交換する。",
+          "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
+          "category": "プロセス間通信",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-service-telemetry",
+          "summary": "サービスの運用記録を保持し、許可した範囲だけを公開する。",
+          "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
+          "category": "観測と運用の記録",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-site",
+          "summary": "Crowsiのセキュリティ基盤とライブラリを紹介するサイトのソース。",
+          "href": "https://github.com/crowsi-net/crowsi-site",
+          "category": "プロジェクト情報",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-browser-security",
+          "summary": "ブラウザのセッション・起動時確認・CSRF検査を組み込む。",
+          "href": "https://github.com/crowsi-net/crowsi-browser-security",
+          "category": "権限と実行制御",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-process-adapter",
+          "summary": "子プロセスの開始・監視・終了と、資源の制限を扱う。",
+          "href": "https://github.com/crowsi-net/crowsi-process-adapter",
+          "category": "権限と実行制御",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-network-sandbox",
+          "summary": "ネットワーク名前空間と資源を制限したLinux環境で、有限のコマンドを実行する。",
+          "href": "https://github.com/crowsi-net/crowsi-network-sandbox",
+          "category": "権限と実行制御",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-network-controller",
+          "summary": "ネットワークの変更案を、既定で拒否するポリシーに照らして検査する。",
+          "href": "https://github.com/crowsi-net/crowsi-network-controller",
+          "category": "権限と実行制御",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-auth-routing",
+          "summary": "認可の経路定義を、アプリケーションとMCPインターフェースで共有する。",
+          "href": "https://github.com/crowsi-net/crowsi-auth-routing",
+          "category": "権限と実行制御",
+          "license": "Apache-2.0"
+        }
+      ],
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "導入・ドキュメント",
+        "href": "/docs"
+      },
+      "pageOrder": [
+        "/",
+        "/capabilities",
+        "/capabilities/authorization",
+        "/capabilities/credentials",
+        "/capabilities/observability",
+        "/use-cases",
+        "/oss",
+        "/docs",
+        "/docs/getting-started",
+        "/journal",
+        "/contact",
+        "/privacy",
+        "/security",
+        "/sitemap",
+        "/capabilities/transport"
+      ]
+    },
+    "en": {
+      "brand": "Crowsi",
+      "caption": "",
+      "origin": "https://crowsi.org",
+      "locale": "en",
+      "accent": "#235c99",
+      "navigation": [
+        {
+          "title": "Explore the foundations",
+          "href": "/capabilities"
+        },
+        {
+          "title": "Use cases",
+          "href": "/use-cases"
+        },
+        {
+          "title": "Libraries",
+          "href": "/oss"
+        },
+        {
+          "title": "Docs",
+          "href": "/docs"
+        }
+      ],
+      "resources": [
+        {
+          "title": "security-observations",
+          "summary": "Scoped sensors, evidence and reusable security observations.",
+          "href": "https://github.com/crowsi-net/security-observations",
+          "category": "Observations and telemetry",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "credential-custody",
+          "summary": "Credential and device authority, constrained usage, recovery and OS backends.",
+          "href": "https://github.com/crowsi-net/credential-custody",
+          "category": "Credential custody",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "authorized-execution",
+          "summary": "Policy, target binding, expiry, revocation and authorized execution boundaries.",
+          "href": "https://github.com/crowsi-net/authorized-execution",
+          "category": "Authorization and execution",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-transport-foundation",
+          "summary": "Exchange bounded messages between local processes without building framing and timeout handling again.",
+          "href": "https://github.com/crowsi-net/crowsi-transport-foundation",
+          "category": "Process communication",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-service-telemetry",
+          "summary": "Retain service-owned operational signals and publish only an explicitly allowed projection.",
+          "href": "https://github.com/crowsi-net/crowsi-service-telemetry",
+          "category": "Observations and telemetry",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-site",
+          "summary": "Explain network and infrastructure control boundaries and safe adoption.",
+          "href": "https://github.com/crowsi-net/crowsi-site",
+          "category": "Project information",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-browser-security",
+          "summary": "Compose browser bootstrap, session and CSRF checks for a caller-owned authentication flow.",
+          "href": "https://github.com/crowsi-net/crowsi-browser-security",
+          "category": "Authorization and execution",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-process-adapter",
+          "summary": "Supervise a process tree and clean it up through explicit start and shutdown operations.",
+          "href": "https://github.com/crowsi-net/crowsi-process-adapter",
+          "category": "Authorization and execution",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-network-sandbox",
+          "summary": "Run a finite command in a Linux environment with a separate network namespace and bounded resources.",
+          "href": "https://github.com/crowsi-net/crowsi-network-sandbox",
+          "category": "Authorization and execution",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-network-controller",
+          "summary": "Evaluate a proposed network change against a deny-by-default policy before applying it.",
+          "href": "https://github.com/crowsi-net/crowsi-network-controller",
+          "category": "Authorization and execution",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "crowsi-auth-routing",
+          "summary": "Use the same validated authorization route declarations across an application and its MCP interface.",
+          "href": "https://github.com/crowsi-net/crowsi-auth-routing",
+          "category": "Authorization and execution",
+          "license": "Apache-2.0"
+        }
+      ],
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "Setup & documentation",
+        "href": "/docs"
+      },
+      "pageOrder": [
+        "/",
+        "/capabilities",
+        "/capabilities/authorization",
+        "/capabilities/credentials",
+        "/capabilities/observability",
+        "/use-cases",
+        "/oss",
+        "/docs",
+        "/docs/getting-started",
+        "/journal",
+        "/contact",
+        "/privacy",
+        "/security",
+        "/sitemap",
+        "/capabilities/transport"
+      ]
+    }
+  }
+}
