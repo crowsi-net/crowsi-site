@@ -108,11 +108,11 @@
       },
       "privacy": {
         "label": "プライバシー",
-        "summary": "公開サイトは閲覧者のネットワーク構成、IP、装置情報、資格情報を収集しません。診断情報を共有する場合は所有権を確認し、個人・顧客・Security情報を最小化してください。"
+        "summary": "お問い合わせ・情報提供には株式会社HATの共通プライバシーポリシーを適用します。"
       },
       "contact": {
         "label": "Crowsiへの連絡",
-        "summary": "記事の誤りや安全上の懸念は、crowsi.orgで確認済みとして案内される窓口へ記事URL、対象版、匿名化した再現情報だけを送ってください。実構成や資格情報を送らないでください。"
+        "summary": "お問い合わせフォームをご利用ください。返信先は任意です。秘密情報は送らないでください。"
       }
     },
     "en": {
@@ -210,11 +210,11 @@
       },
       "privacy": {
         "label": "Privacy",
-        "summary": "The public site collects no reader network topology, IP address, device information, or credentials. Before sharing diagnostics, verify ownership and minimize personal, customer, and security information."
+        "summary": "The common HAT Inc. privacy policy applies to inquiries and reports."
       },
       "contact": {
         "label": "Contact Crowsi",
-        "summary": "Report article errors or safety concerns through a verified channel identified on crowsi.org, sending only the article URL, target version, and sanitized reproduction details. Never send real configurations or credentials."
+        "summary": "Use the contact form. Reply email is optional. Do not send confidential information."
       }
     }
   }
