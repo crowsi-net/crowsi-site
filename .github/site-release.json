@@ -21,5 +21,9 @@
       "zone": "3945266a8a82984b6f6171c55c501883",
       "documentDirectory": "site"
     }
+  ],
+  "requiredChecks": [
+    "repository-policy",
+    "site (crowsi)"
   ]
 }
